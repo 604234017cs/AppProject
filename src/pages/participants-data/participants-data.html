@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar color="red">
+    <ion-title>ข้อมูลการอบรม</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p><b>ข้อมูลการลงทะเบียนอบรม</b></p>
+
+ 
+  <table  color="red">
+    <tr>
+      <th>ชื่อการอบรม</th>  
+      <th>วันที่่</th>
+      <th>รายละเอียด</th>
+    </tr> 
+  </table>
+
+  <table  *ngFor="let item of data" >
+    <tr>
+      <td> {{item.T_Name}} </td>  
+      <td> {{item.Date}} </td> 
+      <td> <ion-icon ios="ios-eye" md="md-eye" (click)="getdetail(item)"></ion-icon></td>
+    </tr>
+  </table>
+<!-- 
+  (click)="getdetail(item)" -->
+
+</ion-content>

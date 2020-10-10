@@ -1,0 +1,29 @@
+
+<ion-header>
+  <ion-navbar color="red">
+    <ion-title>รายละเอียดการอบรม</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card-content >
+
+    <p><b>รายละเอียดข้อมูลการอบรม </b></p>
+    <p><b>ชื่อการอบรม :</b>{{data.T_Name}}</p>
+    <p><b>สถานที่จัดอบรม :</b>{{data.Address}}</p>
+    <p><b>วันที่ :</b>{{data.Date}}</p>
+    <p><b>เวลา :</b>{{data.Time}}</p>
+    <p><b>วิทยากร :</b>{{data.L_Name}}</p>
+    
+    <button ion-button full small color ="Chocolate" (click)= "Name1(training.T_ID)">รายชื่อผู้เข้าอบรม</button>
+    <button ion-button full small color ="MediumVioletRed" (click)= "openfile()">เอกสารประกอบการอบรม</button>
+    <button ion-button full small color ="Brown" (click)= "cer(training.regis_id)">ใบประกาศนียบัตร</button>
+    <button ion-button full small color ="Maroon" (click)= "Evaluation(training.T_ID)" >ประเมินผลการอบรม</button>
+    <button ion-button full small color ="danger" (click)= "btdelete(training.regis_id)">ยกเลิกการลงทะเบียน</button>
+
+</ion-card-content>
+
+
+</ion-content>

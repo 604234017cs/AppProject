@@ -1,0 +1,54 @@
+<ion-header>
+
+  <ion-navbar color="red">
+    <ion-title>แก้ไขข้อมูลวิทยากร</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <!-- <ion-item>
+    <ion-label><P>คำนำหน้า : {{lecturerdata.Dir_Name}}</P></ion-label>
+    <ion-select [(ngModel)]="postdata.DirName">
+      <ion-option value="นาย"><p>นาย</p></ion-option>
+      <ion-option value="นางสาว"><p>นางสาว</p></ion-option>
+      <ion-option value="นาง"><p>นาง</p></ion-option>
+    </ion-select>
+  </ion-item> -->
+
+  <ion-item >
+    <ion-label fixed><p>คำนำหน้า :{{lecturerdata.Dir_Name}}</p></ion-label>
+    <ion-input type="text" value="" [(ngModel)]="postdata.Dir_Name" ></ion-input>
+  </ion-item>
+ 
+  <ion-item >
+    <ion-label fixed><p>ชื่อ-นามสกุล :{{lecturerdata.L_Name}}</p></ion-label>
+    <ion-input type="text" value="" [(ngModel)]="postdata.L_Name" ></ion-input>
+  </ion-item>
+
+  <ion-item >
+    <ion-label fixed><p>หมายเลขโทรศัพท์ :{{lecturerdata.Tell}}</p></ion-label>
+    <ion-input type="text" value="" [(ngModel)] = "postdata.Tell"></ion-input>
+  </ion-item>
+
+  
+  <ion-item >
+    <ion-label fixed><p>สถานที่ทำงาน :{{lecturerdata.Workplace }}</p></ion-label>
+    <ion-input type="text" value="" [(ngModel)] = "postdata.Workplace " ></ion-input>
+  </ion-item>
+
+  <ion-item >
+    <ion-label fixed><p>ชื่อผู้ใช้ :{{lecturerdata.Username}}</p></ion-label>
+    <ion-input type="text" value="" [(ngModel)] = "postdata.Username" ></ion-input>
+  </ion-item>
+
+  <ion-item >
+    <ion-label fixed><p>รหัสผ่าน :{{lecturerdata.Password}}</p></ion-label>
+    <ion-input type="password" value="" [(ngModel)] = "postdata.Password"></ion-input>
+  </ion-item>
+
+  <button ion-button full small color="red" (click)="Edit1()"> ยืนยันการแก้ไขข้อมูล </button>
+
+</ion-content>

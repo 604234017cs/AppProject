@@ -1,0 +1,31 @@
+<!--
+  Generated template for the NamePage page.
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="red">
+    <ion-title>รายชื่อผู้เข้าอบรม</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+ 
+  <p><b>รายชื่อผู้ลงทะเบียนเข้าอบรม </b></p>
+  <table>
+    <tr>
+       <th> ชื่อ-สกุล </th> 
+      <th> เบอร์โทรศัพท์ </th>
+    </tr> 
+  </table>
+
+  <table  *ngFor="let item of register" >
+    <tr>
+      <td>  &nbsp; &nbsp; {{item.Dir_Name}} {{item.P_Name}} </td>  
+      <td> {{item.Tell}} </td> 
+    </tr>
+  </table>
+</ion-content>
