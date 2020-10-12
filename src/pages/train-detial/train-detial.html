@@ -20,10 +20,10 @@
     <p><b>สถานที่จัดอบรม :</b>{{data.Address}}</p>
     <p><b>วันที่ :</b>{{data.Date}}</p>
     <p><b>เวลา :</b>{{data.Time}}</p>
-    <p><b>วิทยากร :</b>{{data.L_Name}}</p>
+    <p><b>วิทยากร :</b>{{data.Dir_Name}} {{data.L_Name}}</p>
   <!-- </ion-item> -->
   
-  <button ion-button full small color ="Chocolate" (click)= "Name2(training.T_ID)">รายชื่อผู้เข้าอบรม</button>
+  <button ion-button full small color ="Chocolate" (click)= "Name2(data.T_ID)">รายชื่อผู้เข้าอบรม</button>
   <button ion-button full color="red" small (click)="regisTrain()" >ลงทะเบียน</button>
     
   

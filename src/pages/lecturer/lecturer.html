@@ -22,13 +22,15 @@
 
 
 <ion-content padding>
-  <ion-item *ngFor="let item of logindata"> 
-         <p>ชื่อ-สกุล : {{item.Dir_Name}} {{item.L_Name}}</p>
-         <p>หมายลขโทรศัพท์ : {{item.Tell}}</p>
-         <p>สถานที่ทำงาน : {{item.Workplace}}</p>
-        
+  <ion-card-content  *ngFor="let item of logindata">
+    <p><b>ข้อมูลผู้วิทยากร</b></p>
+         <p><b>ชื่อ-สกุล : </b>{{item.Dir_Name}} {{item.L_Name}}</p>
+         <p><b>หมายลขโทรศัพท์ : </b>{{item.Tell}}</p>
+         <p><b>สถานที่ทำงาน : </b>{{item.Workplace}}</p>
+         
+         <p><b>ชื่อผู้ใช้ : </b>{{item.Username}}</p>
          <button ion-button full color="red" small (click) ="LecturerData(item.L_ID)">เเสดงข้อมูลการเป็นวิทยากร</button>
-  </ion-item>
+  </ion-card-content>
 
 
 

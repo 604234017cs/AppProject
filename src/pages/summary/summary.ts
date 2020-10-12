@@ -58,7 +58,7 @@ export class SummaryPage {
   getSuggestion(id){
     
     this.loaddata.Suggestion(this.id).subscribe(loaddata=>{
-      console.log("33");
+      // console.log("33");
       this.dataother=loaddata;
       console.log(this.dataother);
       

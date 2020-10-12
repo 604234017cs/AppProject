@@ -4,7 +4,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
 import { Events } from 'ionic-angular';
-import * as Enums from '../enums/enums';
+import * as Enums from './../../enums/enums';
 
 /**
  * Generated class for the LoginPage page.

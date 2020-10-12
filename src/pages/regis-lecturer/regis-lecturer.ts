@@ -3,8 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-import * as Enums from '../enums/enums';
-
+import * as Enums from './../../enums/enums';
 
 
 @IonicPage()
@@ -30,8 +29,9 @@ export class RegisLecturerPage {
       postdataset.append('Name', this.postdata.Name);
       postdataset.append('Tell', this.postdata.Tell);
       postdataset.append('Workplace', this.postdata.Workplace);
+      // postdataset.append('email', this.postdata.email);
       postdataset.append('Username', this.postdata.Username);
-      postdataset.append('Password', this.postdata.Password);
+      postdataset.append('Password', this.postdata.Password);   
 
       let callback:Observable<any> = this.http.post(url,postdataset);
       callback.subscribe(call =>{

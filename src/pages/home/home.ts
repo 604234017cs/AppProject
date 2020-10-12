@@ -3,8 +3,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, Events } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
-import * as Enums from '../enums/enums';
-
+import * as Enums from './../../enums/enums';
 
 
 @Component({

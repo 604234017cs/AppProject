@@ -19,6 +19,7 @@ import { LoaddataProvider } from '../providers/loaddata/loaddata';
 import { TrainDetialPage } from '../pages/train-detial/train-detial';
 import { LogoutPage } from '../pages/logout/logout';
 import { LoginPage } from '../pages/login/login';
+import { ParticipantsDatadetailPage } from '../pages/participants-datadetail/participants-datadetail';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { LoginPage } from '../pages/login/login';
     TrainPage,
     TrainDetialPage,
     LoginPage,
-    
+    ParticipantsDatadetailPage
    
     
     
@@ -55,7 +56,7 @@ import { LoginPage } from '../pages/login/login';
     TrainPage,
     TrainDetialPage,
     LoginPage,
-    
+    ParticipantsDatadetailPage
 
    
     

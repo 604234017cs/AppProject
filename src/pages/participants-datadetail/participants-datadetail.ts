@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams , AlertController} from 'ionic-angular';
 import { LoaddataProvider } from '../../providers/loaddata/loaddata';
-import * as Enums from '../enums/enums';
+import * as Enums from './../../enums/enums';
 
 
 @IonicPage()
@@ -11,27 +11,31 @@ import * as Enums from '../enums/enums';
   templateUrl: 'participants-datadetail.html',
 })
 export class ParticipantsDatadetailPage {
-  data:any=[];
+  data2:any=[];
   Tid;
   tid;
   id;
   // data:any=[];
   constructor(public navCtrl: NavController, public navParams: NavParams,public http: HttpClient,public datas: LoaddataProvider,
               public alertCtrl : AlertController) {
+                this.tid = this.navParams.get('Tid');
+                console.log('tid',this.tid);
+
+                this.loaddata(this.tid);
               }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ParticipantsDatadetailPage');
-    this.data = this.navParams.data;
-    console.log(this.data);
+    // this.data = this.navParams.data;
+    // console.log(this.data);
   }
 
-  // loaddata(id){
-  //   this.datas.loaddatatraindetail(id).subscribe((data:any)=>{
-  //       this.data2 = data;
-  //       console.log(this.data2);   
-  //   }) 
-  // }
+  loaddata(id){
+    this.datas.loaddatatraindetail(this.tid).subscribe((data:any)=>{
+        this.data2 = data;
+        console.log(data);   
+    }) 
+  }
 
 
   deletedata(regis_id){
@@ -49,6 +53,8 @@ export class ParticipantsDatadetailPage {
     
     });
   }
+
+
 
   Evaluation(Tid){
    
@@ -91,6 +97,7 @@ export class ParticipantsDatadetailPage {
     alert1.present();
   }
 
+  
   cer(regis_id){
     this.navCtrl.push("CerPage",regis_id)
   }

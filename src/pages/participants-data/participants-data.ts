@@ -3,7 +3,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Observable } from 'rxjs';
 import { LoaddataProvider } from './../../providers/loaddata/loaddata';
-import * as Enums from '../enums/enums';
+import * as Enums from './../../enums/enums';
+import { ParticipantsDatadetailPage } from '../participants-datadetail/participants-datadetail';
 
  
 @IonicPage()
@@ -14,6 +15,7 @@ import * as Enums from '../enums/enums';
 export class ParticipantsDataPage {
   id;
   Pid;
+  Tid;
   lec : any = [];
   data:any =[];
 
@@ -52,8 +54,12 @@ export class ParticipantsDataPage {
     });
   }
 
-  getdetail(item){
-    this.navCtrl.push("ParticipantsDatadetailPage",item);
+  getdetail(Tid){
+    console.log(Tid);
+    
+    this.navCtrl.push(ParticipantsDatadetailPage,{
+      Tid:Tid
+    });
   }
   
 
