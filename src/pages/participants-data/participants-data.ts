@@ -54,11 +54,12 @@ export class ParticipantsDataPage {
     });
   }
 
-  getdetail(Tid){
+  getdetail(Tid,Pid){
     console.log(Tid);
+    console.log(Pid);
     
     this.navCtrl.push(ParticipantsDatadetailPage,{
-      Tid:Tid
+      Tid:Tid,Pid:Pid
     });
   }
   

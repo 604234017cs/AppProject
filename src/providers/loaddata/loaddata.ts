@@ -10,10 +10,19 @@ export class LoaddataProvider {
     console.log('Hello LoaddataProvider Provider');
   }
 
-  loaddatatraindetail(Tid){
-    const url =  Enums.APIURL.URL + "/AppService/traindetail.php?Tid="+Tid;
+
+
+  loaddatatraindetail(Tid,Pid){
+    const url =  Enums.APIURL.URL + "/AppService/traindetail.php?Tid="+Tid+"&&Pid="+Pid;
+    return this.http.get(url);
+    // const url = "http://localhost/Appservice/CheckRegis.php?tid="+tid+"&&pid="+pid;
+  }
+
+  loaddatatraindetail1(Tid){
+    const url =  Enums.APIURL.URL + "/AppService/traindetail1.php?Tid="+Tid;
     return this.http.get(url);
   }
+
   loaddatatrainregister(Pid){
     const url =  Enums.APIURL.URL + "/AppService/registrain.php?Pid="+Pid;
     return this.http.get(url);
@@ -28,6 +37,8 @@ export class LoaddataProvider {
     const url =  Enums.APIURL.URL + "/AppService/train/loaddata.php";
     return this.http.get(url);
   }
+
+  
 
   searchtrain(query){
     let url =  Enums.APIURL.URL + "/todoslim/public/search/"+query;   
@@ -109,9 +120,10 @@ sum_ability(id){
  }
  
 
- showcer(regis_id){
-   const url =  Enums.APIURL.URL + "/Appservice/showcer.php?regis_id="+regis_id;
+ showcer(pid,tid){
+   const url =  Enums.APIURL.URL + "/Appservice/showcer.php?pid="+pid+"&&tid="+tid;
    return this.http.get(url);
+   
  }
  
 

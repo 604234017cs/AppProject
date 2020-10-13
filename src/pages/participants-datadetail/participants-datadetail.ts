@@ -14,27 +14,30 @@ export class ParticipantsDatadetailPage {
   data2:any=[];
   Tid;
   tid;
+  pid;
   id;
   // data:any=[];
   constructor(public navCtrl: NavController, public navParams: NavParams,public http: HttpClient,public datas: LoaddataProvider,
               public alertCtrl : AlertController) {
                 this.tid = this.navParams.get('Tid');
                 console.log('tid',this.tid);
-
-                this.loaddata(this.tid);
+                this.pid = this.navParams.get('Pid');
+                console.log('pid',this.pid);
+                this.loaddata(this.tid,this.pid);
               }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ParticipantsDatadetailPage');
     // this.data = this.navParams.data;
     // console.log(this.data);
+    
   }
 
-  loaddata(id){
-    this.datas.loaddatatraindetail(this.tid).subscribe((data:any)=>{
+  loaddata(tid,pid){
+    this.datas.loaddatatraindetail(this.tid,this.pid).subscribe((data:any)=>{
         this.data2 = data;
-        console.log(data);   
-    }) 
+        console.log(this.data2);   
+    }) ;
   }
 
 
@@ -98,7 +101,9 @@ export class ParticipantsDatadetailPage {
   }
 
   
-  cer(regis_id){
-    this.navCtrl.push("CerPage",regis_id)
+  cer(pid,tid){
+    this.navCtrl.push("CerPage",{
+      pid:pid,tid:tid
+    });
   }
 }

@@ -35,7 +35,7 @@ export class TrainDetialPage {
   }
 
   loaddata(id){
-    this.datas.loaddatatraindetail(id).subscribe((data:any)=>{
+    this.datas.loaddatatraindetail1(id).subscribe((data:any)=>{
         this.data2 = data;
         console.log(data);   
     }) 
