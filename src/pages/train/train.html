@@ -19,7 +19,7 @@
   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
   
     <ion-item *ngFor="let item of data" (click)="getdetail(item.T_ID)">
-      <p>{{item.T_Name}}</p> <ion-icon name="arrow-dropright"></ion-icon>
+      <p><ion-icon name="arrow-dropright"></ion-icon> {{item.T_Name}}</p> <ion-icon name="arrow-dropright"></ion-icon>
     </ion-item>
   
 </ion-content>
