@@ -20,6 +20,8 @@ import { TrainDetialPage } from '../pages/train-detial/train-detial';
 import { LogoutPage } from '../pages/logout/logout';
 import { LoginPage } from '../pages/login/login';
 import { ParticipantsDatadetailPage } from '../pages/participants-datadetail/participants-datadetail';
+import { TrainLoginPage } from '../pages/train-login/train-login';
+import { TraindetailLoginPage } from '../pages/traindetail-login/traindetail-login';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { ParticipantsDatadetailPage } from '../pages/participants-datadetail/par
     TrainPage,
     TrainDetialPage,
     LoginPage,
-    ParticipantsDatadetailPage
+    ParticipantsDatadetailPage,
+    TrainLoginPage,
+    TraindetailLoginPage
    
     
     
@@ -56,7 +60,9 @@ import { ParticipantsDatadetailPage } from '../pages/participants-datadetail/par
     TrainPage,
     TrainDetialPage,
     LoginPage,
-    ParticipantsDatadetailPage
+    ParticipantsDatadetailPage,
+    TrainLoginPage,
+    TraindetailLoginPage,
 
    
     

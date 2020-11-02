@@ -110,10 +110,10 @@ export class TrainDetialPage {
 
 
 
-  Name2(T_ID){
-    console.log(T_ID);
-    this.navCtrl.push("Name2Page",T_ID);
-  }
+  // Name2(T_ID){
+  //   console.log(T_ID);
+  //   this.navCtrl.push("Name2Page",T_ID);
+  // }
 
  
 }

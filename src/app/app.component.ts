@@ -11,6 +11,8 @@ import { HomePage } from '../pages/home/home';
 // import { ParticipantsPage } from '../pages/participants/participants';
 import { LogoutPage } from '../pages/logout/logout';
 import { LoginPage } from '../pages/login/login';
+// import { TrainPage } from '../pages/train/train';
+import { TrainLoginPage } from '../pages/train-login/train-login';
 // import { RegisParticipantsPage } from '../pages/regis-participants/regis-participants';
 
 @Component({
@@ -28,6 +30,7 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
+      { title: 'ข้อมูลการอบรม', component: TrainLoginPage },
       { title: 'สำหรับผู้เข้าอบรม', component: HomePage },
       { title: 'สำหรับวิทยากร', component: LoginPage },
       
@@ -42,6 +45,7 @@ export class MyApp {
 
     event.subscribe('username:Loguot',()=>{
     this.pages = [
+        { title: 'ข้อมูลการอบรม', component: TrainLoginPage },
         { title: 'สำหรับผู้เข้าอบรม', component: HomePage },
         { title: 'สำหรับวิทยากร', component: LoginPage },
         ];

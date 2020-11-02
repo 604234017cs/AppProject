@@ -1,5 +1,6 @@
 <!--
-  Generated template for the TrainDetialPage page.
+  Generated template for the TraindetailLoginPage page.
+
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
@@ -8,10 +9,12 @@
   <ion-navbar color="red">
     <ion-title>รายละเอียดการอบรม</ion-title>
   </ion-navbar>
+
 </ion-header>
 
 
 <ion-content padding>
+
   <ion-card-content *ngFor="let data of data2">
     <!-- <ion-item >  -->
     <p><b>รายละเอียดข้อมูลการอบรม</b></p>
@@ -24,10 +27,11 @@
   <!-- </ion-item> -->
   
   <!-- <button ion-button full small color ="Chocolate" (click)= "Name2(data.T_ID)">รายชื่อผู้เข้าอบรม</button> -->
-  <button ion-button full color="red" small (click)="regisTrain()" >ลงทะเบียน</button>
+  <button ion-button full color="red" (click)="Login()" >เข้าสู่ระบบ</button>
     
   
    
 
   </ion-card-content>
+ 
 </ion-content>
