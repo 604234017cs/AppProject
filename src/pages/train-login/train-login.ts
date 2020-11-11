@@ -18,7 +18,7 @@ import { TraindetailLoginPage } from '../traindetail-login/traindetail-login';
 })
 export class TrainLoginPage {
   data: Object;
-
+  tid;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public datas: LoaddataProvider) {
     this.loaddata();
@@ -33,6 +33,7 @@ export class TrainLoginPage {
     this.datas.getTrain().subscribe(datas=>{
       this.data=datas;
       console.log(datas);
+      // this.tid = 
     });
   }
 
@@ -48,8 +49,8 @@ export class TrainLoginPage {
   // }
 
   
-  getdetail(){
-    this.navCtrl.push(TraindetailLoginPage);
+  getdetail(item){
+    this.navCtrl.push(TraindetailLoginPage,item);
   }
 
   getItems(ev:any) {

@@ -21,7 +21,8 @@ tid;
   
 
   constructor(public navCtrl: NavController, public navParams: NavParams ,public datas: LoaddataProvider) {
-  
+  this.tid = this.navParams.data;
+  console.log(this.tid);
   this.loaddata(this.tid);  
   }
 
@@ -29,10 +30,11 @@ tid;
     console.log('ionViewDidLoad TraindetailLoginPage');
   }
 
-  loaddata(id){
-    this.datas.getTrain().subscribe((data:any)=>{
+  loaddata(tid){
+    this.datas.dataTrain(this.tid).subscribe((data:any)=>{
         this.data2 = data;
         console.log(data);   
+
     }) 
   }
 

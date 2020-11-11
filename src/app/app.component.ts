@@ -30,9 +30,10 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'ข้อมูลการอบรม', component: TrainLoginPage },
       { title: 'สำหรับผู้เข้าอบรม', component: HomePage },
       { title: 'สำหรับวิทยากร', component: LoginPage },
+      { title: 'ข้อมูลการอบรม', component: TrainLoginPage },
+
       
 
     ];
@@ -45,9 +46,10 @@ export class MyApp {
 
     event.subscribe('username:Loguot',()=>{
     this.pages = [
-        { title: 'ข้อมูลการอบรม', component: TrainLoginPage },
         { title: 'สำหรับผู้เข้าอบรม', component: HomePage },
         { title: 'สำหรับวิทยากร', component: LoginPage },
+        { title: 'ข้อมูลการอบรม', component: TrainLoginPage },
+
         ];
     });  
   }

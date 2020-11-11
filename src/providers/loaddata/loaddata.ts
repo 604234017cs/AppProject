@@ -38,6 +38,10 @@ export class LoaddataProvider {
     return this.http.get(url);
   }
 
+  dataTrain(tid){
+    const url =  Enums.APIURL.URL + "/AppService/train/load_train.php?tid="+tid;
+    return this.http.get(url);
+  }
   
 
   searchtrain(query){
