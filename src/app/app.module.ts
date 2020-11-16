@@ -23,7 +23,7 @@ import { ParticipantsDatadetailPage } from '../pages/participants-datadetail/par
 import { TrainLoginPage } from '../pages/train-login/train-login';
 import { TraindetailLoginPage } from '../pages/traindetail-login/traindetail-login';
 
-
+import { DocumentViewer } from '@ionic-native/document-viewer';
 @NgModule({
   declarations: [
     MyApp,
@@ -71,7 +71,7 @@ import { TraindetailLoginPage } from '../pages/traindetail-login/traindetail-log
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    LoaddataProvider
+    LoaddataProvider,DocumentViewer
   ]
 })
 export class AppModule {}
