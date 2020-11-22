@@ -24,6 +24,10 @@ import { TrainLoginPage } from '../pages/train-login/train-login';
 import { TraindetailLoginPage } from '../pages/traindetail-login/traindetail-login';
 
 import { DocumentViewer } from '@ionic-native/document-viewer';
+import { BackgroundMode } from '@ionic-native/background-mode';
+import { LocalNotifications } from '@ionic-native/local-notifications';
+import { IonicStorageModule } from '@ionic/storage';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -37,17 +41,18 @@ import { DocumentViewer } from '@ionic-native/document-viewer';
     ParticipantsDatadetailPage,
     TrainLoginPage,
     TraindetailLoginPage
-   
-    
-    
-    
-    
+
+
+
+
+
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    IonicStorageModule.forRoot()
 
   ],
   bootstrap: [IonicApp],
@@ -64,14 +69,14 @@ import { DocumentViewer } from '@ionic-native/document-viewer';
     TrainLoginPage,
     TraindetailLoginPage,
 
-   
-    
+
+
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    LoaddataProvider,DocumentViewer
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    LoaddataProvider, DocumentViewer, BackgroundMode, LocalNotifications
   ]
 })
-export class AppModule {}
+export class AppModule { }

@@ -42,7 +42,12 @@ export class ParticipantsPage {
 
   goedit(logindata){
     this.navCtrl.push("EditParticipantsPage",logindata);
-   }
+  }
+
+  alert(){
+    this.navCtrl.push("AlertpartiPage");
+  }
+
 
   
   ParticipantsData(id){

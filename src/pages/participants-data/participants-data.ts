@@ -6,7 +6,6 @@ import { LoaddataProvider } from './../../providers/loaddata/loaddata';
 import * as Enums from './../../enums/enums';
 import { ParticipantsDatadetailPage } from '../participants-datadetail/participants-datadetail';
 
- 
 @IonicPage()
 @Component({
   selector: 'page-participants-data',
@@ -16,10 +15,10 @@ export class ParticipantsDataPage {
   id;
   Pid;
   Tid;
-  lec : any = [];
-  data:any =[];
+  lec: any = [];
+  data: any = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http:HttpClient,public datas: LoaddataProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient, public datas: LoaddataProvider) {
     this.id = this.navParams.data;
     this.Pid = this.navParams.get('pid');
     console.log(this.Pid);
@@ -31,37 +30,38 @@ export class ParticipantsDataPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ParticipantsDataPage');
   }
-  loaddata(Pid){
-    this.datas.loaddatatrainregister(Pid).subscribe((data:any)=>{
-        this.data = data;
-        console.log(data);   
-        // console.log(this.data[0]['T_ID']);
-    }) 
+  loaddata(Pid) {
+    this.datas.loaddatatrainregister(Pid).subscribe((data: any) => {
+      this.data = data;
+     
+    
+      // console.log(this.data[0]['T_ID']);
+    })
   }
-  
 
-  ionViewWillEnter(){
+
+  ionViewWillEnter() {
     console.log(this.id);
 
     let url: string = Enums.APIURL.URL + "/Appservice/participants/participants_data.php";
-    let dataPost =  new FormData();
+    let dataPost = new FormData();
     dataPost.append('id', this.id);
     let data: Observable<any> = this.http.post(url, dataPost);
     data.subscribe(data => {
       // console.log(data) 
       this.lec = data;
-        console.log(this.lec);
+      console.log(this.lec);
     });
   }
 
-  getdetail(Tid,Pid){
+  getdetail(Tid, Pid) {
     console.log(Tid);
     console.log(Pid);
-    
-    this.navCtrl.push(ParticipantsDatadetailPage,{
-      Tid:Tid,Pid:Pid
+
+    this.navCtrl.push(ParticipantsDatadetailPage, {
+      Tid: Tid, Pid: Pid
     });
   }
-  
+
 
 }

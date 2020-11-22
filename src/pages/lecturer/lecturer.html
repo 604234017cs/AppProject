@@ -12,8 +12,8 @@
     </button>
     <ion-title>ข้อมูลวิทยากร</ion-title>
     <ion-buttons end>
-      <button ion-button color="dark" (click)="goedit1(logindata)" >
-        <ion-icon name="create" ></ion-icon>
+      <button ion-button color="dark" (click)="alertlec()" >
+        <ion-icon name="notifications-outline" ></ion-icon>
       </button>
     </ion-buttons>
    
@@ -27,8 +27,8 @@
          <p><b>ชื่อ-สกุล : </b>{{item.Dir_Name}} {{item.L_Name}}</p>
          <p><b>หมายลขโทรศัพท์ : </b>{{item.Tell}}</p>
          <p><b>สถานที่ทำงาน : </b>{{item.Workplace}}</p>
-         
          <p><b>ชื่อผู้ใช้ : </b>{{item.Username}}</p>
+         <button ion-button full color="red" (click) ="goedit1(logindata)">แก้ไขข้อมูลผู้ใช้</button>
          <button ion-button full color="red" (click) ="LecturerData(item.L_ID)">เเสดงข้อมูลการเป็นวิทยากร</button>
   </ion-card-content>
 

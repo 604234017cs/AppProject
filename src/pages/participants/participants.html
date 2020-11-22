@@ -13,8 +13,8 @@
     <ion-title>ข้อมูลผู้เข้าอบรม</ion-title>
     
     <ion-buttons end>
-      <button ion-button color="dark" (click)="goedit(logindata)" >
-        <ion-icon name="create" ></ion-icon>
+      <button ion-button color="dark" (click)="alert()" >
+        <ion-icon name="notifications-outline" ></ion-icon>
       </button>
     </ion-buttons>
   
@@ -29,6 +29,7 @@
     <p><b>หมายเลขโทรศัพท์ : </b>{{item.Tell}}</p>
     <p><b>ชื่อผู้ใช้ : </b>{{item.Username}}</p>
     
+    <button ion-button full color="Brown" (click) ="goedit(logindata)">แก้ไขข้อมูลผู้ใช้</button>
     <button ion-button full color="red" (click) ="ParticipantsData(item.P_ID)">เเสดงข้อมูลการลงทะเบียนอบรม</button>
     <button ion-button full color ="Brown" (click) ="Trains(item.P_ID)">การอบรม</button>
 
